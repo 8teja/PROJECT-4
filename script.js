@@ -1,12 +1,7 @@
-function ChangeText(){
-    document.getElementById("ChangeText").innerHTML="Party Time";
-}
-function ChangeTextOut(){
-    document.getElementById("ChangeText").innerHTML="Set Alarm";
-}
+
 function getTime(){
-    const d = new Date();
-    document.getElementById("hour").innerHTML = addZero(twl(d.getHours()));
+    const d = new Date(); 
+    document.getElementById("hour").innerHTML = addZero(format(d.getHours()));
     document.getElementById("minute").innerHTML = addZero(d.getMinutes());
     document.getElementById("seconds").innerHTML = addZero(d.getSeconds());
     if(d.getHours()>=12){
@@ -18,7 +13,7 @@ function getTime(){
     setInterval("getTime()",1000)
     }
     getTime()
-    function twl(p){
+    function format(p){
         if(p>12){
             return p-12;
         }
@@ -48,16 +43,16 @@ function getTime(){
     else{
         greet.innerHTML="GOOD MORNING";
     }
-    var button=document.getElementById("ChangeText");
+    var button=document.getElementById("changetext");
     button.addEventListener("click",function(){
         let date=new Date();
         let hour=date.getHours();
-        let wakeup=document.getElementById('wakes');
-        let lunch=document.getElementById('lunchs');
-        let nap=document.getElementById('naps');
-        let night=document.getElementById('nights');
+        let wakeup=document.getElementById('wake');
+        let lunch=document.getElementById('lunch');
+        let nap=document.getElementById('nap');
+        let night=document.getElementById('night');
         if(wakeup.value==hour){
-            document.getElementById("messages").innerHTML="GRAB SOME HEALTHY BREAKFAST";
+            document.getElementById("messages").innerHTML="GRAB SOME BREAKFAST";
             document.getElementById("image").src="Component 30 – 1.jpg";
         }
         if(lunch.value==hour){
@@ -73,4 +68,3 @@ function getTime(){
             document.getElementById("image").src="night_image.jpg";
         }
     })
-    
