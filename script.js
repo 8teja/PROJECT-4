@@ -67,4 +67,12 @@ function getTime(){
             document.getElementById("messages").innerHTML="CLOSE YOUR EYES AND GO TO SLEEP";
             document.getElementById("image").src="night_image.jpg";
         }
+        var wake_time=wake.options[wake.selectedIndex].text;
+    document.getElementById("wakes").innerHTML=wake_time;
+    var lunch_time=lunch.options[lunch.selectedIndex].text;
+    document.getElementById("lunchs").innerHTML=lunch_time;
+    var nap_time=nap.options[nap.selectedIndex].text;
+    document.getElementById("naps").innerHTML=nap_time;
+    var night_time=night.options[night.selectedIndex].text;
+    document.getElementById("nights").innerHTML=night_time;
     })
