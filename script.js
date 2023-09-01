@@ -14,11 +14,11 @@ function getTime(){
     setInterval("getTime()",1000)
     }
     getTime()
-    function format(p){
-        if(p>12){
-            return p-12;
+    function format(hours){
+        if(hours>12){
+            return hours-12;
         }
-        return p;
+        return hours;
     }
     function addZero(i) {
         if (i < 10) {
